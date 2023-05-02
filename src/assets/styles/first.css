@@ -1,0 +1,130 @@
+.business-card {
+    position: absolute;
+    height: 250px;
+    width: 500px;
+    background: #f12e50;
+    border-radius: 30px;
+  }
+  .business-card:before, .business-card:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+  }
+  .business-card:before {
+    background: #ee0c4b;
+    border-top-right-radius: 30px;
+    clip-path: polygon(20% 0, 100% 0, 100% 30%, 40% 70%);
+  }
+  .business-card:after {
+    background: #c80e3d;
+    border-bottom-right-radius: 30px;
+    clip-path: polygon(40% 70%, 100% 30%, 100% 100%, 48.5% 100%);
+  }
+  div {
+    z-index: 2;
+  }
+  .bc__logo {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+  .bc__logo figure {
+    position: relative;
+    display: inline-block;
+    height: 4em;
+    width: calc(4em * 0.57735);
+    border-radius: 0.5em/0.25em;
+    background: white;
+    transform: rotate(90deg);
+  }
+  .bc__logo figure:before, .bc__logo figure:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: inherit;
+    content: '';
+  }
+  .bc__logo figure:before {
+    transform: rotate(60deg);
+  }
+  .bc__logo figure:after {
+    transform: rotate(-60deg);
+  }
+  .bc__logo i {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 25%;
+    width: 70%;
+    background: #ee0c4b;
+    transform: skew(-30deg) rotate(-90deg);
+    z-index: 2;
+  }
+  .bc__logo i:before, .bc__logo i:after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 75%;
+    background: inherit;
+    z-index: 5;
+  }
+  .bc__logo i:before {
+    top: -82%;
+    right: 24%;
+    transform: skew(-40deg) rotate(90deg);
+  }
+  .bc__logo i:after {
+    bottom: -85%;
+    right: 23%;
+    transform: skew(-40deg) rotate(90deg);
+  }
+  .bc__logo h2 {
+    display: inline-block;
+    padding-left: 0.65em;
+    color: white;
+    font-size: 2em;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 2;
+    vertical-align: top;
+  }
+  .bc__tagline {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    color: white;
+    line-height: 1.4;
+    text-align: right;
+  }
+  .bc__tagline em {
+    font-weight: 600;
+    font-style: italic;
+  }
+  .credit {
+    position: absolute;
+    bottom: 15%;
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
+  .credit a {
+    color: #ea4c89;
+    text-decoration: none;
+  }
+  .bc__b{
+    position: relative;
+    padding: 10px;
+    border: 1px solid;
+    width: 500px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

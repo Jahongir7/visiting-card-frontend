@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+/* CENTERING */
+/* .centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  /*transform: translate(-50%, -50%);
+} */
+
+h3 {
+  position: relative;
+  left: 45%;
+}
+/* THE FRONT */
+.front {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/326221/bc-front.jpg);
+  background-size: cover;
+}
+/* /end */
+/* THE BACK */
+.back {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/326221/bc-back.jpg);
+  background-size: cover;
+}
+.back h1, .back p, .back .font-a-icons {
+  color: #000;
+  font-family: "Lato";
+  margin-left: 30%;
+  line-height: 90%;
+}
+.back h1 {
+  margin-top: 5%;
+}
+.back p {
+  font-size: 16px;
+  padding-bottom: 15px;
+  width: 35%;
+  border-bottom: 2px solid #000;
+}
+.back .bold {
+  font-weight: bold;
+}
+.back .font-a-icons {
+  margin-top: 25px;
+}
+.back .font-a-icons .icon-group {
+  margin-top: 8px;
+}
+.back .font-a-icons span, .back .font-a-icons .link, .back .font-a-icons .fa, .back .font-a-icons a {
+  color: #000;
+}
+.back .font-a-icons .fa {
+  font-size: 18px;
+}
+.back .font-a-icons span, .back .font-a-icons a {
+  font-size: 16px;
+}
+.back .font-a-icons a, .back .font-a-icons .website {
+  text-decoration: none;
+}
+.back .font-a-icons a:hover, .back .font-a-icons .website:hover {
+  color: #3f3f3f;
+}
+.back .icon-box {
+  position: relative;
+  color: #000;
+  font-size: 24px;
+  height: 45px;
+  width: 45px;
+  padding: 5px;
+  top: 75px;
+  left: 30%;
+  display: inline-block;
+  border: 2px solid #000;
+  margin: 5px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  box-shadow: inset 0 50px 0 0 #000;
+  color: #fff;
+}
+/* /end */
+/* THE FLIP EFFECT */
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
+  height: 700px;
+  width: 600px;
+}
+ .front, .back {
+  height: 350px;
+  width: 600px;
+}
+.front {
+  z-index: 2;
+  /* firefox 31 */
+  transform: rotateY(0deg);
+  margin: 20px;
+}
+.back {
+  background-color: #000;
+  border: 1px solid;
+  margin: 20px;
+}
+.vertical .back {
+  transform: rotateX(180deg);
+}

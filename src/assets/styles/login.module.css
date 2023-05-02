@@ -1,0 +1,67 @@
+.login_page{
+    width: 100%;
+    height: 100vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden !important;
+    position: relative;
+}
+.login_page::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40%;
+    overflow-x: hidden !important;
+    width: 180%;
+    height: 200vh;
+    background-image: url("../main.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+.login_page h2{
+    margin: 0;
+    color: #000;
+}
+.login_page form{
+    backdrop-filter: blur(10000px);
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: #000;
+    width: 300px;
+    padding: 40px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.227);
+    border-radius: 12px;
+}
+.login_page input{
+    margin: 10px 0;
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.284);
+    border-radius: 5px;
+    color: #000;
+}
+.login_page button{
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #000;
+    border:1px solid #00000047;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+.login_page button:hover{
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.178);
+}
+
+@media (max-width: 500px) {
+    .login_page form{
+        width: 100%;
+        margin: 0 20px;
+    }
+}

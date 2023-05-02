@@ -1,0 +1,23 @@
+import { Route, Routes } from "react-router";
+import AllCards from "./components/cards/allCards";
+import LoginPage from "./components/login";
+import Hero from "./components/main";
+import "./styles/main.scss";
+import RegisterPage from "./components/register";
+import Ask from "./components/ask";
+
+function App() {
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/all-cards" element={<AllCards />} />
+        <Route path="/ask" element={<Ask />} />
+      </Routes>
+    </div>
+  );
+}
+
+export default App;
