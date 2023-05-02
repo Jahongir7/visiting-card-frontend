@@ -458,3 +458,12 @@ input[type=radio] {
         padding-left: 2em;
     }
 }
+
+@media (max-width: 579px) {
+    .App{
+        display: none;
+    }
+    body::before{
+        content: 'Dastur faqat komputerda ishlaydi';
+    }
+}
