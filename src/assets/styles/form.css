@@ -95,7 +95,7 @@
     align-items: center;
     justify-content: center;
 }
-form{
+.form{
     display: grid;
     grid-template-columns: 350px 350px;
 }

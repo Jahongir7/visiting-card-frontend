@@ -11,13 +11,22 @@ const Ask = () => {
     <>
       <section className="hero">
         <div className="container">
-          <div className="sub-heading">
-            <Link to="/login">
-              <button className="btn login_btn">Kirish</button>
+          <div
+            className="sub-heading"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              flexWrap: "wrap",
+            }}
+          >
+            <Link to="/all-cards">
+              <button className="btn login_btn relative">
+                Shablondan foydalanish <b>PRO</b>
+              </button>
             </Link>
-            <Link to="/register">
-              <button className="btn login_btn">Ro'yhatdan_o'tish</button>
-            </Link>
+            <a href="../../generate.html">
+              <button className="btn login_btn">Vizitka yasash</button>
+            </a>
           </div>
         </div>
       </section>

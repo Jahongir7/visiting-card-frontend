@@ -5,6 +5,7 @@ import Hero from "./components/main";
 import "./styles/main.scss";
 import RegisterPage from "./components/register";
 import Ask from "./components/ask";
+import Generate from "./components/generate";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/all-cards" element={<AllCards />} />
         <Route path="/ask" element={<Ask />} />
+        <Route path="/generate" element={<Generate />} />
       </Routes>
     </div>
   );

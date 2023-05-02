@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PBC Generator :: Generator</title>
+    <link rel="stylesheet" type="text/css" href="src/assets/styles/generator.css">
+    <script type="text/javascript" src="main.js" defer></script>
+    <script type="text/javascript" src="generator.js" defer></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+
+<body>
+    
+   
+    <div id="wrapper">
+        <main>
+            <form id="data" autocomplete="off">
+                <h4>All fields required:*</h4>
+                <label>Name:</label><br>
+                <input type="text" id="fullname" name="fullname" size="37" maxlength="22"><br>
+                <label>Professional occupancy:</label><br>
+                <input type="text" id="occupancy" name="occupancy" size="37" maxlength="28"><br>
+                <label>E-mail:</label><br>
+                <input type="text" id="email" name="email" size="37" maxlength="28"><br>
+                <label>LinkedIn / Social Media:</label><br>
+                <input type="text" id="linkedin" name="linkedin" size="37" maxlength="28"><br>
+                <label>Phone number:</label><br>
+                <input type="text" id="phone" name="phone" size="37" maxlength="24"><br>
+            </form>
+            <div id="optionsLarge">
+                <button id="closeOptions" type="button">Done</button>
+                Background Color:&nbsp;&nbsp;
+                <input type="color" name="bgColor" id="bgColor" value="#ffffff"><br><br>
+                Font Color:&nbsp;&nbsp;
+                <input type="color" name="fontColor" id="fontColor"><br><br>
+                <form id="manageImg" name="colorImg">
+                    Image Color:<br>
+                    <input type="radio" name="imgColor" id="black" value="Black">Black<br>
+                    <input type="radio" name="imgColor" id="white" value="White">White<br>
+                    <input type="radio" name="imgColor" id="opac" value="Semi-Transparent">Semi-Transparent<br>
+                    <input type="radio" name="imgColor" id="none" value="none" checked>No image<br><br>
+                </form>
+                <form id="formImg" name="imag">
+                    Image:<br>
+                    <input type="radio" name="images" id="image1" value="Modern" checked>Idea<br>
+                    <input type="radio" name="images" id="image2" value="Classic">Peace & Love<br>
+                    <input type="radio" name="images" id="image3" value="Geometric">Geometric
+                </form>
+            </div><br>
+            <div class="checkCard">
+                <h4>Check your business card here:</h4>
+                <div id="card">
+                    <div id="outputName"></div>
+                    <div id="image"></div>
+                    <div id="outputOccupancy"></div><br>
+                    <div id="outputEmail"></div>
+                    <div id="outputLinkedin"></div>
+                    <div id="outputPhone"></div>
+                </div>
+                <div id="settings">
+                    <h4>Settings:<button id="openSettings" type="button"><img id="colors" src="img/colorPicker.png"
+                                alt="Color picker icon"></button></h4>
+                </div>
+                <p>How many cards do you want to order? &nbsp;
+                    <input type="text" id="numCards" name="numCards"></p>
+                <div id="errorMsg"></div>
+                <button id="cardRequest" type="button">Request Cards!</button>
+                <button id="startAgain" type="button">Build a new card</button><br><br>
+            </div>
+        </main>
+    </div>
+    <script>
+        html2canvas(document.body).then(function(canvas) {
+    document.body.appendChild(canvas);
+});
+    </script>
+</body>
+
+</html>

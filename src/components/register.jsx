@@ -15,7 +15,7 @@ const RegisterPage = () => {
         <h2>Ro'yhatdan o'tish</h2>
         <input type="text" placeholder="Foydalanuvchi ismi" />
         <input type="password" placeholder="Parol" />
-        <Link to="/dashboard/statistics">
+        <Link to="/login">
           <button type="submit">Ro'yhatdan o'tish</button>
         </Link>
       </form>
