@@ -7,6 +7,7 @@ import RegisterPage from "./components/register";
 import Ask from "./components/ask";
 import Generate from "./components/generate";
 import Generator from "./components/generator";
+import FullGenerator from "./components/FullGenerator";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/ask" element={<Ask />} />
         <Route path="/generate" element={<Generate />} />
         <Route path="/main-generator" element={<Generator />} />
+        <Route path="/full-generator" element={<FullGenerator />} />
       </Routes>
     </div>
   );

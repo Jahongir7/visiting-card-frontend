@@ -19,13 +19,13 @@ const Ask = () => {
               flexWrap: "wrap",
             }}
           >
-            <Link to="/all-cards">
+            <Link to="/main-generator">
               <button className="btn login_btn relative">
-                Shablondan foydalanish <b>PRO</b>
+                Rasmlar orqali vizitka yasash <b>PRO</b>
               </button>
             </Link>
-            <Link to="/main-generator">
-              <button className="btn login_btn">Vizitka yasash</button>
+            <Link to="/full-generator">
+              <button className="btn login_btn">Oddiy Vizitka yasash</button>
             </Link>
           </div>
         </div>
