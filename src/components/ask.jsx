@@ -24,9 +24,9 @@ const Ask = () => {
                 Shablondan foydalanish <b>PRO</b>
               </button>
             </Link>
-            <a href="./generate.html">
+            <Link to="/main-generator">
               <button className="btn login_btn">Vizitka yasash</button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

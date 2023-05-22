@@ -15,16 +15,19 @@ const LoginPage = () => {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    const response = await fetch("http://localhost:1337/api/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-    })
+    const response = await fetch(
+      "https://auth-backend-cyan.vercel.app/api/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      }
+    )
       .then((res) => res.json())
       .then((data) => setMyData(data))
       .catch((err) => console.log(err));

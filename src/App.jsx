@@ -6,6 +6,7 @@ import "./styles/main.scss";
 import RegisterPage from "./components/register";
 import Ask from "./components/ask";
 import Generate from "./components/generate";
+import Generator from "./components/generator";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/all-cards" element={<AllCards />} />
         <Route path="/ask" element={<Ask />} />
         <Route path="/generate" element={<Generate />} />
+        <Route path="/main-generator" element={<Generator />} />
       </Routes>
     </div>
   );
