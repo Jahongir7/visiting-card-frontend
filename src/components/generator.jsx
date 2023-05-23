@@ -50,17 +50,18 @@ function Generator() {
             type="text"
             className="name"
             maxlength="30"
-            placeholder="business name"
+            placeholder="business nomi"
           />
           <input
             type="text"
             className="slogan"
-            maxlength="50"
-            placeholder="business slogan"
+            maxlength="70"
+            placeholder="business qisqacha ta'rifi"
+            style={{ fontSize: "16px" }}
           />
 
-          <input type="text" className="website-link" placeholder="website" />
-          <input type="text" className="email" placeholder="email" />
+          <input type="text" className="website-link" placeholder="Telefon" />
+          <input type="text" className="email" placeholder="telegram" />
         </div>
         <div className="setting">
           <input
