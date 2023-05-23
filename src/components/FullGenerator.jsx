@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../assets/styles/generator.css";
 import html2canvas from "html2canvas";
+import { Icon } from "@iconify/react";
 
 function FullGenerator() {
   const [numCards, setNumCards] = useState("");
@@ -14,22 +15,37 @@ function FullGenerator() {
   const [errorMsg, setErrorMsg] = useState("");
   const [backgroundColor, setBackgroundColor] = useState("");
   const [fontColor, setFontColor] = useState("");
-  const [myImage, setMyImage] = useState("");
+  const [myImage, setMyImage] = useState();
   const imageArr = [
     [
-      '<img src="./img/light-bulb_black.png" alt="Black light-bulb"  width="58px"/>',
-      '<img src="./img/peace_black.png" alt="Black peace signal" width="58px"/>',
-      '<img src="./img/cube_black.png" alt="Black cube" width="58px"/>',
+      <Icon id="image" icon="ion:bulb" width={58} />,
+      <Icon id="image" icon="fa:hand-peace-o" width={58} />,
+      <Icon id="image" icon="cib:codesandbox" width="58px" />,
     ],
     [
-      '<img src="./img/light-bulb.png" alt="White light-bulb" width="58px"/>',
-      '<img src="./img/peace.png" alt="White peace signal" width="58px"/>',
-      '<img src="./img/cube.png" alt="White cube" width="58px"/>',
+      <Icon id="image" icon="ion:bulb-outline" width={58} />,
+      <Icon id="image" icon="fa:hand-peace-o" width={58} />,
+      <Icon id="image" icon="cib:codesandbox" width="58px" />,
     ],
     [
-      '<img src="./img/light-bulb.png" alt="White light-bulb with opacity of 0.3" width="58px" style="opacity: 0.3"/>',
-      '<img src="./img/peace.png" alt="White peace signal with opacity of 0.3" width="58px" style="opacity: 0.3"/>',
-      '<img src="./img/cube.png" alt="White cube with opacity of 0.3" width="58px" style="opacity: 0.3"/>',
+      <Icon
+        id="image"
+        icon="ion:bulb-outline"
+        width={58}
+        style={{ opacity: 0.3 }}
+      />,
+      <Icon
+        id="image"
+        icon="fa:hand-peace-o"
+        width={58}
+        style={{ opacity: 0.3 }}
+      />,
+      <Icon
+        id="image"
+        icon="cib:codesandbox"
+        width="58px"
+        style={{ opacity: 0.3 }}
+      />,
     ],
   ];
 
@@ -207,7 +223,7 @@ function FullGenerator() {
               onClick={() => handleImageSelection(image)}
               className={selectedImage === index ? "active" : ""}
             >
-              <div dangerouslySetInnerHTML={{ __html: image }} />
+              {image}
             </div>
           )
         )}
@@ -219,7 +235,7 @@ function FullGenerator() {
           style={{ backgroundColor: backgroundColor, color: fontColor }}
         >
           <div id="outputName">{fullName}</div>
-          <div dangerouslySetInnerHTML={{ __html: myImage }} id="image" />
+          {myImage}
           <div id="outputOccupancy" style={{ fontSize: "12px" }}>
             {occupancy}
           </div>
