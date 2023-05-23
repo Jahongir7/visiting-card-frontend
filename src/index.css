@@ -467,3 +467,6 @@ input[type=radio] {
         content: 'Dastur faqat komputerda ishlaydi';
     }
 }
+#wrapper{
+    color: #000 !important;
+}

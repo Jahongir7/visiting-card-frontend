@@ -17,19 +17,19 @@ function FullGenerator() {
   const [myImage, setMyImage] = useState("");
   const imageArr = [
     [
-      '<img src="./img/light-bulb_black.png" alt="Black light-bulb" " width="58px">',
-      '<img src="./img/peace_black.png" alt="Black peace signal" width="58px">',
-      '<img src="./img/cube_black.png" alt="Black cube" width="58px">',
+      '<img src="./img/light-bulb_black.png" alt="Black light-bulb"  width="58px"/>',
+      '<img src="./img/peace_black.png" alt="Black peace signal" width="58px"/>',
+      '<img src="./img/cube_black.png" alt="Black cube" width="58px"/>',
     ],
     [
-      '<img src="./img/light-bulb.png" alt="White light-bulb" width="58px">',
-      '<img src="./img/peace.png" alt="White peace signal" width="58px">',
-      '<img src="./img/cube.png" alt="White cube" width="58px">',
+      '<img src="./img/light-bulb.png" alt="White light-bulb" width="58px"/>',
+      '<img src="./img/peace.png" alt="White peace signal" width="58px"/>',
+      '<img src="./img/cube.png" alt="White cube" width="58px"/>',
     ],
     [
-      '<img src="./img/light-bulb.png" alt="White light-bulb with opacity of 0.3" width="58px" style="opacity: 0.3">',
-      '<img src="./img/peace.png" alt="White peace signal with opacity of 0.3" width="58px" style="opacity: 0.3">',
-      '<img src="./img/cube.png" alt="White cube with opacity of 0.3" width="58px" style="opacity: 0.3">',
+      '<img src="./img/light-bulb.png" alt="White light-bulb with opacity of 0.3" width="58px" style="opacity: 0.3"/>',
+      '<img src="./img/peace.png" alt="White peace signal with opacity of 0.3" width="58px" style="opacity: 0.3"/>',
+      '<img src="./img/cube.png" alt="White cube with opacity of 0.3" width="58px" style="opacity: 0.3"/>',
     ],
   ];
 
@@ -126,7 +126,7 @@ function FullGenerator() {
     <div id="wrapper">
       {/* Data Section */}
       <form id="data" autocomplete="off">
-        <h4>All fields required:*</h4>
+        <h4>Barcha maydonlarni to'ldiring:*</h4>
         <label>Ism:</label>
         <br />
         <input
@@ -173,7 +173,7 @@ function FullGenerator() {
         <button id="closeOptions" type="button">
           Done
         </button>
-        Background Color:&nbsp;&nbsp;
+        Orqa fon rangi:&nbsp;&nbsp;
         <input
           type="color"
           name="bgColor"
@@ -182,7 +182,7 @@ function FullGenerator() {
         />
         <br />
         <br />
-        Font Color:&nbsp;&nbsp;
+        Yozuv rangi:&nbsp;&nbsp;
         <input
           type="color"
           name="fontColor"
@@ -193,9 +193,9 @@ function FullGenerator() {
         <br />
         <form id="manageImg" name="colorImg">
           <select value={imageType} onChange={handleImageTypeChange}>
-            <option value="black">Black</option>
-            <option value="white">White</option>
-            <option value="opac">Opacity</option>
+            <option value="black">Qora</option>
+            <option value="white">Oq</option>
+            <option value="opac">Shaffof</option>
           </select>
         </form>
       </div>
@@ -213,7 +213,7 @@ function FullGenerator() {
         )}
       </div>
       <div className="checkCard">
-        <h4>Check your business card here:</h4>
+        <h4>O'zgarishlarni tekshirish:</h4>
         <div
           id="card"
           style={{ backgroundColor: backgroundColor, color: fontColor }}
@@ -250,10 +250,6 @@ function FullGenerator() {
         <br />
         <br />
       </div>
-      {/* Buttons Section */}
-      <button onClick={handleCardRequest}>Card Request</button>
-      <button onClick={handleStartAgain}>Start Again</button>
-
       {/* Error Message Section */}
       <div>{errorMsg}</div>
     </div>
