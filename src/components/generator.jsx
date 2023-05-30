@@ -6,6 +6,30 @@ import img3 from "../../img/img3.png";
 import img4 from "../../img/img4.png";
 import img5 from "../../img/img5.png";
 import img6 from "../../img/img6.png";
+import img7 from "../../img/img7.png";
+import img8 from "../../img/img8.png";
+import img9 from "../../img/img9.png";
+import img10 from "../../img/img10.png";
+import img11 from "../../img/img11.png";
+import img12 from "../../img/img12.png";
+import img13 from "../../img/img13.png";
+import img14 from "../../img/img14.png";
+import img15 from "../../img/img15.png";
+import img16 from "../../img/img16.png";
+import img17 from "../../img/img17.png";
+import img18 from "../../img/img18.png";
+import img19 from "../../img/img19.png";
+import img20 from "../../img/img20.png";
+import img21 from "../../img/img21.png";
+import img22 from "../../img/img22.png";
+import img23 from "../../img/img23.png";
+import img24 from "../../img/img24.png";
+import img25 from "../../img/img25.png";
+import img26 from "../../img/img26.png";
+import img27 from "../../img/img27.png";
+import img28 from "../../img/img28.png";
+import img29 from "../../img/img29.png";
+
 import "../assets/styles/gen.css";
 
 function Generator() {
@@ -39,7 +63,37 @@ function Generator() {
     });
   };
 
-  const bgs = [img1, img2, img3, img4, img5, img6];
+  const bgs = [
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img7,
+    img8,
+    img9,
+    img10,
+    img11,
+    img12,
+    img13,
+    img14,
+    img15,
+    img16,
+    img17,
+    img18,
+    img19,
+    img20,
+    img21,
+    img22,
+    img23,
+    img24,
+    img25,
+    img26,
+    img27,
+    img28,
+    img29,
+  ];
 
   return (
     <div className="gen_g">
