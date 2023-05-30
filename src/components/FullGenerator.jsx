@@ -21,11 +21,25 @@ function FullGenerator() {
       <Icon id="image" icon="ion:bulb" width={58} />,
       <Icon id="image" icon="fa:hand-peace-o" width={58} />,
       <Icon id="image" icon="cib:codesandbox" width="58px" />,
+      <Icon id="image" icon="wpf:medical-doctor" width={58} />,
+      <Icon
+        id="image"
+        icon="fluent-emoji-high-contrast:man-mechanic"
+        width={58}
+      />,
+      <Icon id="image" icon="game-icons:teacher" width="58px" />,
     ],
     [
       <Icon id="image" icon="ion:bulb-outline" width={58} />,
       <Icon id="image" icon="fa:hand-peace-o" width={58} />,
       <Icon id="image" icon="cib:codesandbox" width="58px" />,
+      <Icon id="image" icon="wpf:medical-doctor" width={58} />,
+      <Icon
+        id="image"
+        icon="fluent-emoji-high-contrast:man-mechanic"
+        width={58}
+      />,
+      <Icon id="image" icon="game-icons:teacher" width="58px" />,
     ],
     [
       <Icon
@@ -43,6 +57,24 @@ function FullGenerator() {
       <Icon
         id="image"
         icon="cib:codesandbox"
+        width="58px"
+        style={{ opacity: 0.3 }}
+      />,
+      <Icon
+        id="image"
+        icon="wpf:medical-doctor"
+        width={58}
+        style={{ opacity: 0.3 }}
+      />,
+      <Icon
+        id="image"
+        icon="fluent-emoji-high-contrast:man-mechanic"
+        style={{ opacity: 0.3 }}
+        width={58}
+      />,
+      <Icon
+        id="image"
+        icon="game-icons:teacher"
         width="58px"
         style={{ opacity: 0.3 }}
       />,
