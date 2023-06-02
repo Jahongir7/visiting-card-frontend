@@ -86,7 +86,8 @@
     font-style: 20px !important;
     margin: 5px 0;
 }
-.gen_g input:focus{
+.gen_g input:focus,
+.gen_g input:hover{
     background-color: #ffffff13;
     border-radius: 2px;
 }
