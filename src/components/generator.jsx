@@ -37,6 +37,7 @@ import Draggable from "react-draggable";
 import "../assets/styles/gen.css";
 import LoginPage from "./login";
 import RegisterPage from "./register";
+import { Icon } from "@iconify/react";
 
 function Generator() {
   const [activeBg, setActiveBg] = useState(0);
@@ -131,20 +132,33 @@ function Generator() {
           </Draggable>
 
           <Draggable>
-            <input
-              type="text"
-              style={{ color: fontColor }}
-              className="website-link"
-              placeholder="Telefon"
-            />
+            <div style={{ position: "absolute", left: 0, top: "80%" }}>
+              <Icon icon="icon-park:phone-call" width={32} />
+              <input
+                type="text"
+                style={{ color: fontColor }}
+                className="website-link"
+                placeholder="Telefon"
+              />
+            </div>
           </Draggable>
           <Draggable>
             <input
               type="text"
               style={{ color: fontColor }}
-              className="email"
-              placeholder="telegram"
+              className="website-link"
             />
+          </Draggable>
+          <Draggable>
+            <div style={{ position: "absolute", right: 0, top: "80%" }}>
+              <input
+                type="text"
+                style={{ color: fontColor }}
+                className="email"
+                placeholder="telegram"
+              />
+              <Icon icon="logos:telegram" width={32} />
+            </div>
           </Draggable>
         </div>
 
