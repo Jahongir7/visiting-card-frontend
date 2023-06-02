@@ -47,6 +47,7 @@ function Generator() {
   const uploadBtnRef = useRef(null);
   const logoRef = useRef(null);
   const cardRef = useRef(null);
+  const cardRef1 = useRef(null);
 
   const handleUploadChange = (e) => {
     const files = e.target.files;
@@ -63,10 +64,18 @@ function Generator() {
   const handleBgClick = (i) => {
     setActiveBg(i);
     cardRef.current.style.backgroundImage = `url('${bgs[i]}')`;
+    cardRef1.current.style.backgroundImage = `url('${bgs[i]}')`;
   };
 
   const handleDownloadClick = () => {
     html2canvas(cardRef.current).then((canvas) => {
+      let link = document.getElementById("link");
+      link.href = canvas.toDataURL();
+      link.click();
+    });
+  };
+  const handleDownloadClick1 = () => {
+    html2canvas(cardRef1.current).then((canvas) => {
       let link = document.getElementById("link");
       link.href = canvas.toDataURL();
       link.click();
@@ -221,6 +230,65 @@ function Generator() {
           </b>
         )}
       </Dialog>
+      <div className="card_g padd" ref={cardRef1}>
+        <Draggable>
+          <input
+            type="text"
+            style={{ color: fontColor }}
+            className="name"
+            maxlength="30"
+          />
+        </Draggable>
+        <Draggable>
+          <input
+            type="text"
+            style={{ color: fontColor, fontSize: "16px" }}
+            className="slogan"
+            maxlength="70"
+          />
+        </Draggable>
+
+        <Draggable>
+          <input
+            type="text"
+            style={{ color: fontColor }}
+            className="website-link"
+          />
+        </Draggable>
+        <Draggable>
+          <input
+            type="text"
+            style={{ color: fontColor }}
+            className="website-link"
+          />
+        </Draggable>
+        <Draggable>
+          <input
+            type="text"
+            style={{ color: fontColor }}
+            className="website-link"
+          />
+        </Draggable>
+        <Draggable>
+          <input
+            type="text"
+            style={{ color: fontColor }}
+            className="website-link"
+          />
+        </Draggable>
+        <Draggable>
+          <input type="text" style={{ color: fontColor }} className="email" />
+        </Draggable>
+      </div>
+      {localStorage.getItem("auth") !== null ? (
+        <button className="download-btn" onClick={handleDownloadClick1}>
+          Cardni orqatarafini yuklab olish
+        </button>
+      ) : (
+        <button className="download-btn" onClick={() => setVisible(true)}>
+          Cardni orqatarafini yuklab olish
+        </button>
+      )}
     </div>
   );
 }

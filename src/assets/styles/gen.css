@@ -3,10 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.gen_g{
+    padding-bottom: 50px;
+}
 .heading_g{
     text-align: center;
     margin-bottom: 5vh;
+}
+.padd{
+    margin-left: 100px;
+    margin-top: 100px;
 }
 .heading_g span{
     color: blue;
