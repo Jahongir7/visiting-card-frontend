@@ -29,17 +29,13 @@ const LoginPage = () => {
       }
     )
       .then((res) => res.json())
-      .then((data) => setMyData(data))
+      .then((data) => {
+        setMyData(data);
+        localStorage.setItem("auth", 1);
+        alert("Muvaffaqiyatli kiridingiz, endi yuklab olishingiz mumkin");
+      })
       .catch((err) => console.log(err));
   }
-  console.log(myData);
-  useEffect(() => {
-    if (myData.user) {
-      localStorage.setItem("token", myData.user);
-      alert("Login successful");
-      navigate("/ask");
-    }
-  }, [myData]);
 
   return (
     <div className={classes.login_page}>

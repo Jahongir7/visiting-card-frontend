@@ -9,15 +9,21 @@ import Generate from "./components/generate";
 import Generator from "./components/generator";
 import FullGenerator from "./components/FullGenerator";
 
+//theme
+import "primereact/resources/themes/lara-light-indigo/theme.css";
+
+//core
+import "primereact/resources/primereact.min.css";
+
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Hero />} />
+        {/* <Route path="/" element={<Hero />} /> */}
+        <Route path="/" element={<Ask />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/all-cards" element={<AllCards />} />
-        <Route path="/ask" element={<Ask />} />
         <Route path="/generate" element={<Generate />} />
         <Route path="/main-generator" element={<Generator />} />
         <Route path="/full-generator" element={<FullGenerator />} />

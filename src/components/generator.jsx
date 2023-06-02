@@ -1,4 +1,7 @@
+import { Button } from "primereact/button";
 import React, { useState, useRef } from "react";
+
+import { Dialog } from "primereact/dialog";
 import html2canvas from "html2canvas";
 import img1 from "../../img/img1.png";
 import img2 from "../../img/img2.png";
@@ -29,11 +32,17 @@ import img26 from "../../img/img26.png";
 import img27 from "../../img/img27.png";
 import img28 from "../../img/img28.png";
 import img29 from "../../img/img29.png";
+import Draggable from "react-draggable";
 
 import "../assets/styles/gen.css";
+import LoginPage from "./login";
+import RegisterPage from "./register";
 
 function Generator() {
   const [activeBg, setActiveBg] = useState(0);
+  const [fontColor, setFontColor] = useState("");
+  const [visible, setVisible] = useState(false);
+  const [acc, setAcc] = useState(true);
   const uploadBtnRef = useRef(null);
   const logoRef = useRef(null);
   const cardRef = useRef(null);
@@ -99,24 +108,46 @@ function Generator() {
     <div className="gen_g">
       <div className="main_g">
         <div className="card_g" ref={cardRef}>
-          <div className="logo" ref={logoRef}></div>
-          <input
-            type="text"
-            className="name"
-            maxlength="30"
-            placeholder="business nomi"
-          />
-          <input
-            type="text"
-            className="slogan"
-            maxlength="70"
-            placeholder="business qisqacha ta'rifi"
-            style={{ fontSize: "16px" }}
-          />
+          <Draggable>
+            <div className="logo" ref={logoRef}></div>
+          </Draggable>
+          <Draggable>
+            <input
+              type="text"
+              style={{ color: fontColor }}
+              className="name"
+              maxlength="30"
+              placeholder="business nomi"
+            />
+          </Draggable>
+          <Draggable>
+            <input
+              type="text"
+              style={{ color: fontColor, fontSize: "16px" }}
+              className="slogan"
+              maxlength="70"
+              placeholder="business qisqacha ta'rifi"
+            />
+          </Draggable>
 
-          <input type="text" className="website-link" placeholder="Telefon" />
-          <input type="text" className="email" placeholder="telegram" />
+          <Draggable>
+            <input
+              type="text"
+              style={{ color: fontColor }}
+              className="website-link"
+              placeholder="Telefon"
+            />
+          </Draggable>
+          <Draggable>
+            <input
+              type="text"
+              style={{ color: fontColor }}
+              className="email"
+              placeholder="telegram"
+            />
+          </Draggable>
         </div>
+
         <div className="setting">
           <input
             type="file"
@@ -139,13 +170,43 @@ function Generator() {
               />
             ))}
           </div>
-          <button className="download-btn" onClick={handleDownloadClick}>
-            Download
-          </button>
+          {localStorage.getItem("auth") !== null ? (
+            <button className="download-btn" onClick={handleDownloadClick}>
+              Yuklab olish
+            </button>
+          ) : (
+            <button className="download-btn" onClick={() => setVisible(true)}>
+              Yuklab olish
+            </button>
+          )}
 
           <a id="link" download="card.png" style={{ display: "none" }}></a>
         </div>
       </div>
+      <label htmlFor="fontColor">Yozuv rangini tanlashlash uchun bosing.</label>
+      <input
+        id="fontColor"
+        type="color"
+        onChange={(e) => setFontColor(e.target.value)}
+      />
+      <Dialog visible={visible} onHide={() => setVisible(false)}>
+        {acc ? <LoginPage /> : <RegisterPage />}
+        {acc ? (
+          <b
+            onClick={() => setAcc(false)}
+            style={{ display: "block", marginTop: "10px" }}
+          >
+            Ro'yhatdan o'tish{" "}
+          </b>
+        ) : (
+          <b
+            onClick={() => setAcc(true)}
+            style={{ display: "block", marginTop: "10px" }}
+          >
+            Login
+          </b>
+        )}
+      </Dialog>
     </div>
   );
 }

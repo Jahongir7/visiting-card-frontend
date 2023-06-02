@@ -9,14 +9,14 @@ const Ask = () => {
   });
   return (
     <>
-      <section className="hero">
-        <div className="container">
+      <section className="hero" style={{ backdropFilter: "blur(100px)" }}>
+        <div className="helloo">
           <div
             className="sub-heading"
             style={{
               display: "flex",
-              flexDirection: "column",
-              flexWrap: "wrap",
+              alignItems: "center",
+              width: "100%",
             }}
           >
             <Link to="/main-generator">

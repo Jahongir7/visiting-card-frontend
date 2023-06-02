@@ -31,20 +31,18 @@ const RegisterPage = () => {
       }
     )
       .then((res) => res.json())
-      .then((data) => setMyData(data))
+      .then((data) => {
+        setMyData(data);
+        localStorage.setItem("auth", 1);
+        alert("Ro'yhatdan o'tdingiz endi yuklab olishingiz mumkin");
+      })
       .catch((err) => console.log(err));
   }
-  console.log(myData);
-  useEffect(() => {
-    if (myData.status === "ok") {
-      navigate("/login");
-    }
-  }, [myData]);
 
   return (
     <div className={classes.login_page}>
       <form onSubmit={handleSubmit} data-aos="zoom-in">
-        <h2>Register</h2>
+        <h2>Ro'yhatdan o'tish</h2>
         <input
           value={name}
           onChange={(e) => setName(e.target.value)}
@@ -66,7 +64,7 @@ const RegisterPage = () => {
           placeholder="Password"
         />
 
-        <button type="submit">Kirish</button>
+        <button type="submit">Ro'yhatdan o'tish</button>
       </form>
     </div>
   );
