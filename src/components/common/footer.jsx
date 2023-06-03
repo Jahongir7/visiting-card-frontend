@@ -20,7 +20,7 @@ const Footer = () => {
               <button className="button-primary">Konsultatsiya olish</button>
             </div>
             <ul>
-              <h3>UMUMIY</h3>
+              <h4>UMUMIY</h4>
               <li>
                 <Link to="/">Biz haqimizda</Link>
               </li>
@@ -37,21 +37,7 @@ const Footer = () => {
                 <Link to="/">Biz bilan bog'lanish</Link>
               </li>
             </ul>
-            <ul>
-              <h3>XIZMATLAR</h3>
-              <li>
-                <Link to="/">Mukammal platformalarni yaratish</Link>
-              </li>
-              <li>
-                <Link to="/">Raqamli marketing</Link>
-              </li>
-              <li>
-                <Link to="/">B2B</Link>
-              </li>
-              <li>
-                <Link to="/">E-Commerce</Link>
-              </li>
-            </ul>
+            <div></div>
             <ul>
               <h3>ALOQA</h3>
               <div className="connect">
