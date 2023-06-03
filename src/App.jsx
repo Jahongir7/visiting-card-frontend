@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router";
 import AllCards from "./components/cards/allCards";
 import LoginPage from "./components/login";
-import Hero from "./components/main";
 import "./styles/main.scss";
 import RegisterPage from "./components/register";
 import Ask from "./components/ask";

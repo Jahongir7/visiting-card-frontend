@@ -38,6 +38,8 @@ import "../assets/styles/gen.css";
 import LoginPage from "./login";
 import RegisterPage from "./register";
 import { Icon } from "@iconify/react";
+import Header from "./common/navbar";
+import Footer from "./common/footer";
 
 function Generator() {
   const [activeBg, setActiveBg] = useState(0);
@@ -115,19 +117,132 @@ function Generator() {
   ];
 
   return (
-    <div className="gen_g">
-      <div className="main_g">
-        <div className="card_g" ref={cardRef}>
-          <Draggable>
-            <div className="logo" ref={logoRef}></div>
-          </Draggable>
+    <>
+      <Header />
+      <div className="gen_g" style={{ paddingTop: "50px" }}>
+        <div className="main_g">
+          <div className="card_g" ref={cardRef}>
+            <Draggable>
+              <div className="logo" ref={logoRef}></div>
+            </Draggable>
+            <Draggable>
+              <input
+                type="text"
+                style={{ color: fontColor }}
+                className="name"
+                maxlength="30"
+                placeholder="business nomi"
+              />
+            </Draggable>
+            <Draggable>
+              <input
+                type="text"
+                style={{ color: fontColor, fontSize: "16px" }}
+                className="slogan"
+                maxlength="70"
+                placeholder="business qisqacha ta'rifi"
+              />
+            </Draggable>
+
+            <Draggable>
+              <div style={{ position: "absolute", left: 0, top: "80%" }}>
+                <Icon icon="icon-park:phone-call" width={32} />
+                <input
+                  type="text"
+                  style={{ color: fontColor }}
+                  className="website-link"
+                  placeholder="Telefon"
+                />
+              </div>
+            </Draggable>
+            <Draggable>
+              <input
+                type="text"
+                style={{ color: fontColor }}
+                className="website-link"
+              />
+            </Draggable>
+            <Draggable>
+              <div style={{ position: "absolute", right: 0, top: "80%" }}>
+                <input
+                  type="text"
+                  style={{ color: fontColor }}
+                  className="email"
+                  placeholder="telegram"
+                />
+                <Icon icon="logos:telegram" width={32} />
+              </div>
+            </Draggable>
+          </div>
+
+          <div className="setting">
+            <input
+              type="file"
+              id="upload"
+              ref={uploadBtnRef}
+              onChange={handleUploadChange}
+              hidden
+            />
+            <label for="upload" class="btn upload">
+              Logo joylash
+            </label>
+            <div className="backgrounds">
+              {bgs.map((bg, i) => (
+                <img
+                  key={i}
+                  src={bg}
+                  alt={`Background ${i}`}
+                  className={activeBg === i ? "active" : ""}
+                  onClick={() => handleBgClick(i)}
+                />
+              ))}
+            </div>
+            {localStorage.getItem("auth") !== null ? (
+              <button className="download-btn" onClick={handleDownloadClick}>
+                Yuklab olish
+              </button>
+            ) : (
+              <button className="download-btn" onClick={() => setVisible(true)}>
+                Yuklab olish
+              </button>
+            )}
+
+            <a id="link" download="card.png" style={{ display: "none" }}></a>
+          </div>
+        </div>
+        <label htmlFor="fontColor">
+          Yozuv rangini tanlashlash uchun bosing.
+        </label>
+        <input
+          id="fontColor"
+          type="color"
+          onChange={(e) => setFontColor(e.target.value)}
+        />
+        <Dialog visible={visible} onHide={() => setVisible(false)}>
+          {acc ? <LoginPage /> : <RegisterPage />}
+          {acc ? (
+            <b
+              onClick={() => setAcc(false)}
+              style={{ display: "block", marginTop: "10px" }}
+            >
+              Ro'yhatdan o'tish{" "}
+            </b>
+          ) : (
+            <b
+              onClick={() => setAcc(true)}
+              style={{ display: "block", marginTop: "10px" }}
+            >
+              Login
+            </b>
+          )}
+        </Dialog>
+        <div className="card_g padd" ref={cardRef1}>
           <Draggable>
             <input
               type="text"
               style={{ color: fontColor }}
               className="name"
               maxlength="30"
-              placeholder="business nomi"
             />
           </Draggable>
           <Draggable>
@@ -136,20 +251,15 @@ function Generator() {
               style={{ color: fontColor, fontSize: "16px" }}
               className="slogan"
               maxlength="70"
-              placeholder="business qisqacha ta'rifi"
             />
           </Draggable>
 
           <Draggable>
-            <div style={{ position: "absolute", left: 0, top: "80%" }}>
-              <Icon icon="icon-park:phone-call" width={32} />
-              <input
-                type="text"
-                style={{ color: fontColor }}
-                className="website-link"
-                placeholder="Telefon"
-              />
-            </div>
+            <input
+              type="text"
+              style={{ color: fontColor }}
+              className="website-link"
+            />
           </Draggable>
           <Draggable>
             <input
@@ -159,137 +269,35 @@ function Generator() {
             />
           </Draggable>
           <Draggable>
-            <div style={{ position: "absolute", right: 0, top: "80%" }}>
-              <input
-                type="text"
-                style={{ color: fontColor }}
-                className="email"
-                placeholder="telegram"
-              />
-              <Icon icon="logos:telegram" width={32} />
-            </div>
+            <input
+              type="text"
+              style={{ color: fontColor }}
+              className="website-link"
+            />
+          </Draggable>
+          <Draggable>
+            <input
+              type="text"
+              style={{ color: fontColor }}
+              className="website-link"
+            />
+          </Draggable>
+          <Draggable>
+            <input type="text" style={{ color: fontColor }} className="email" />
           </Draggable>
         </div>
-
-        <div className="setting">
-          <input
-            type="file"
-            id="upload"
-            ref={uploadBtnRef}
-            onChange={handleUploadChange}
-            hidden
-          />
-          <label for="upload" class="btn upload">
-            Logo joylash
-          </label>
-          <div className="backgrounds">
-            {bgs.map((bg, i) => (
-              <img
-                key={i}
-                src={bg}
-                alt={`Background ${i}`}
-                className={activeBg === i ? "active" : ""}
-                onClick={() => handleBgClick(i)}
-              />
-            ))}
-          </div>
-          {localStorage.getItem("auth") !== null ? (
-            <button className="download-btn" onClick={handleDownloadClick}>
-              Yuklab olish
-            </button>
-          ) : (
-            <button className="download-btn" onClick={() => setVisible(true)}>
-              Yuklab olish
-            </button>
-          )}
-
-          <a id="link" download="card.png" style={{ display: "none" }}></a>
-        </div>
-      </div>
-      <label htmlFor="fontColor">Yozuv rangini tanlashlash uchun bosing.</label>
-      <input
-        id="fontColor"
-        type="color"
-        onChange={(e) => setFontColor(e.target.value)}
-      />
-      <Dialog visible={visible} onHide={() => setVisible(false)}>
-        {acc ? <LoginPage /> : <RegisterPage />}
-        {acc ? (
-          <b
-            onClick={() => setAcc(false)}
-            style={{ display: "block", marginTop: "10px" }}
-          >
-            Ro'yhatdan o'tish{" "}
-          </b>
+        {localStorage.getItem("auth") !== null ? (
+          <button className="download-btn" onClick={handleDownloadClick1}>
+            Cardni orqatarafini yuklab olish
+          </button>
         ) : (
-          <b
-            onClick={() => setAcc(true)}
-            style={{ display: "block", marginTop: "10px" }}
-          >
-            Login
-          </b>
+          <button className="download-btn" onClick={() => setVisible(true)}>
+            Cardni orqatarafini yuklab olish
+          </button>
         )}
-      </Dialog>
-      <div className="card_g padd" ref={cardRef1}>
-        <Draggable>
-          <input
-            type="text"
-            style={{ color: fontColor }}
-            className="name"
-            maxlength="30"
-          />
-        </Draggable>
-        <Draggable>
-          <input
-            type="text"
-            style={{ color: fontColor, fontSize: "16px" }}
-            className="slogan"
-            maxlength="70"
-          />
-        </Draggable>
-
-        <Draggable>
-          <input
-            type="text"
-            style={{ color: fontColor }}
-            className="website-link"
-          />
-        </Draggable>
-        <Draggable>
-          <input
-            type="text"
-            style={{ color: fontColor }}
-            className="website-link"
-          />
-        </Draggable>
-        <Draggable>
-          <input
-            type="text"
-            style={{ color: fontColor }}
-            className="website-link"
-          />
-        </Draggable>
-        <Draggable>
-          <input
-            type="text"
-            style={{ color: fontColor }}
-            className="website-link"
-          />
-        </Draggable>
-        <Draggable>
-          <input type="text" style={{ color: fontColor }} className="email" />
-        </Draggable>
       </div>
-      {localStorage.getItem("auth") !== null ? (
-        <button className="download-btn" onClick={handleDownloadClick1}>
-          Cardni orqatarafini yuklab olish
-        </button>
-      ) : (
-        <button className="download-btn" onClick={() => setVisible(true)}>
-          Cardni orqatarafini yuklab olish
-        </button>
-      )}
-    </div>
+      <Footer />
+    </>
   );
 }
 

@@ -17,6 +17,7 @@ const Ask = () => {
               display: "flex",
               alignItems: "center",
               width: "100%",
+              height: "65vh",
             }}
           >
             <Link to="/main-generator">

@@ -1,0 +1,16 @@
+.nav1{
+    height: 10vh;
+    backdrop-filter: blur(100px);
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between !important;
+    color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    border-bottom: 1px solid #333;
+}
+.nav1 h3{
+    text-align: left;
+}
