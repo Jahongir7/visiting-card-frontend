@@ -20,7 +20,6 @@
 .main_g{
     display: flex;
     padding: 50px;
-    flex-wrap: wrap;
 }
 .card_g{
     width: 45%;
@@ -28,12 +27,13 @@
     min-width: 500px;
     background-color: #fff;
     position: relative;
-    padding: 20px;
+    padding:5px 20px;
     background-image: url("img/img5.png");
     background-size: cover;
     background-position: center;
     overflow: hidden;
     cursor: move;
+    margin-top: 20px;
 }
 .card_g::before{
     content: "";
@@ -74,8 +74,8 @@
 
 }
 .gen_g input[type="color"]{
-    width: 100px;
-    height: 100px;
+    width: 30px;
+    height: 30px;
     border: 3px solid green
 }
 .gen_g ::placeholder{
@@ -132,15 +132,15 @@
 
 .backgrounds{
     width: auto;
-    height: auto;
+    height: 700px;
     display: grid;
-    grid-template-columns: repeat(12, 200px);
+    grid-template-columns: repeat(3, 200px);
     grid-gap: 10px;
     padding: 10px;
     background: rgba(0,0,0,0.1);
     border-radius: 10px;
     margin: 20px 0;
-    overflow-x: scroll;
+    overflow-y: scroll;
 }
 .backgrounds img{
     width: 100%;
@@ -166,8 +166,19 @@
     outline: none;
     cursor: pointer;
 }
-
-
+.twoCards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10;
+}
+.cardBottomItems{
+    display: flex;
+    justify-content: space-around !important;
+    align-items: center;
+    margin-top: 10px;
+    width: 80%;
+}
 
 
 

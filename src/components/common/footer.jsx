@@ -37,28 +37,24 @@ const Footer = () => {
                 <Link to="/">Biz bilan bog'lanish</Link>
               </li>
             </ul>
-            <div></div>
             <ul>
-              <h3>ALOQA</h3>
+              <h4>Foydali linklar</h4>
+              <li>
+                <Link to="/">Photoshop</Link>
+              </li>
+              <li>
+                <Link to="/">MidJourney</Link>
+              </li>
+              <li>
+                <Link to="/">SioAI</Link>
+              </li>
+            </ul>
+            <ul>
+              <h4>ALOQA</h4>
               <div className="connect">
                 <li>
                   <Link to="/">
                     <Icon icon="logos:telegram" />
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <Icon icon="skill-icons:instagram" />
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <Icon icon="devicon:twitter" />
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <Icon icon="logos:whatsapp-icon" />
                   </Link>
                 </li>
               </div>

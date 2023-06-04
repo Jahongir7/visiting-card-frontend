@@ -1,4 +1,4 @@
-import "../../assets/styles/sixth.css";
+// import "../../assets/styles/sixth.css";
 import html2canvas from "html2canvas";
 
 const SixthCard = () => {
@@ -17,8 +17,8 @@ const SixthCard = () => {
   };
 
   return (
-    <div className="myContainer" >
-      <button type="button" className="button"  onClick={handleImageDownload}>
+    <div className="myContainer">
+      <button type="button" className="button" onClick={handleImageDownload}>
         Yuklab olish
       </button>
 
