@@ -186,58 +186,38 @@ function Generator() {
             </div>
             <>
               <div className="card_g" ref={cardRef1}>
-                <Draggable>
-                  <input
-                    type="text"
-                    style={{ color: fontColor }}
-                    className="name"
-                    maxlength="30"
-                  />
-                </Draggable>
-                <Draggable>
-                  <input
-                    type="text"
-                    style={{ color: fontColor, fontSize: "16px" }}
-                    className="slogan"
-                    maxlength="70"
-                  />
-                </Draggable>
+                <input
+                  type="text"
+                  style={{ color: fontColor }}
+                  className="name"
+                  maxlength="30"
+                />
+                <input
+                  type="text"
+                  style={{ color: fontColor, fontSize: "16px" }}
+                  className="slogan"
+                />
 
-                <Draggable>
-                  <input
-                    type="text"
-                    style={{ color: fontColor }}
-                    className="website-link"
-                  />
-                </Draggable>
-                <Draggable>
-                  <input
-                    type="text"
-                    style={{ color: fontColor }}
-                    className="website-link"
-                  />
-                </Draggable>
-                <Draggable>
-                  <input
-                    type="text"
-                    style={{ color: fontColor }}
-                    className="website-link"
-                  />
-                </Draggable>
-                <Draggable>
-                  <input
-                    type="text"
-                    style={{ color: fontColor }}
-                    className="website-link"
-                  />
-                </Draggable>
-                <Draggable>
-                  <input
-                    type="text"
-                    style={{ color: fontColor }}
-                    className="email"
-                  />
-                </Draggable>
+                <input
+                  type="text"
+                  style={{ color: fontColor }}
+                  className="website-link"
+                />
+                <input
+                  type="text"
+                  style={{ color: fontColor }}
+                  className="website-link"
+                />
+                <input
+                  type="text"
+                  style={{ color: fontColor }}
+                  className="website-link"
+                />
+                <input
+                  type="text"
+                  style={{ color: fontColor }}
+                  className="website-link"
+                />
               </div>
               <div className="cardBottomItems">
                 <div>
