@@ -13,7 +13,9 @@ const Navbar = () => {
     <>
       <div className={classes.nav1}>
         <div></div>
-        <Button onClick={() => setVisible(true)}>Kirish</Button>
+        <button onClick={() => setVisible(true)} className={classes.myBtn}>
+          Kirish
+        </button>
       </div>
       <Dialog visible={visible} onHide={() => setVisible(false)}>
         {acc ? <LoginPage /> : <RegisterPage />}

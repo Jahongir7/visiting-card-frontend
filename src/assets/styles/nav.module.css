@@ -14,3 +14,15 @@
 .nav1 h3{
     text-align: left;
 }
+.myBtn{
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    font-style: 18px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
