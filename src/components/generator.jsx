@@ -186,7 +186,6 @@ function Generator() {
               )}
             </div>
             <>
-              <hr style={{ width: "100%", marginTop: "20px" }} />
               <div className="card_g" ref={cardRef1}>
                 <input
                   type="text"
@@ -254,7 +253,7 @@ function Generator() {
             <label
               for="upload"
               class="btn upload"
-              style={{ position: "absolute", left: "10px" }}
+              style={{ position: "absolute", left: "33%", top: "70px" }}
             >
               Logo joylash
             </label>

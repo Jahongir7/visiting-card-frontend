@@ -173,92 +173,96 @@ function FullGenerator() {
   return (
     <div id="wrapper">
       {/* Data Section */}
-      <form id="data" autocomplete="off">
-        <h4>Barcha maydonlarni to'ldiring:*</h4>
-        <label>Ism:</label>
-        <br />
-        <input
-          type="text"
-          name="fullName"
-          value={fullName}
-          onChange={handleDataChange}
-        />
-        <label>Izoh:</label>
-        <br />
-        <input
-          type="text"
-          name="occupancy"
-          value={occupancy}
-          onChange={handleDataChange}
-        />
-        <label>Email:</label>
-        <br />
-        <input
-          type="text"
-          name="email"
-          value={email}
-          onChange={handleDataChange}
-        />
-        <label>Telegram:</label>
-        <br />
-        <input
-          type="text"
-          name="linkedin"
-          value={linkedin}
-          onChange={handleDataChange}
-        />
-        <label>Telefon:</label>
-        <br />
-        <input
-          type="text"
-          name="phone"
-          value={phone}
-          onChange={handleDataChange}
-        />
-      </form>
-      {/* Options Section */}
-      <div id="optionsLarge">
-        <button id="closeOptions" type="button">
-          Done
-        </button>
-        Orqa fon rangi:&nbsp;&nbsp;
-        <input
-          type="color"
-          name="bgColor"
-          id="bgColor"
-          onChange={handleOptionsChange}
-        />
-        <br />
-        <br />
-        Yozuv rangi:&nbsp;&nbsp;
-        <input
-          type="color"
-          name="fontColor"
-          id="fontColor"
-          onChange={handleOptionsChange}
-        />
-        <br />
-        <br />
-        <form id="manageImg" name="colorImg">
-          <select value={imageType} onChange={handleImageTypeChange}>
-            <option value="black">Qora</option>
-            <option value="white">Oq</option>
-            <option value="opac">Shaffof</option>
-          </select>
+      <div className="firstSection">
+        <form id="data" autocomplete="off">
+          <h4>Barcha maydonlarni to'ldiring:*</h4>
+          <label>Ism:</label>
+          <br />
+          <input
+            type="text"
+            name="fullName"
+            value={fullName}
+            onChange={handleDataChange}
+          />
+          <label>Izoh:</label>
+          <br />
+          <input
+            type="text"
+            name="occupancy"
+            value={occupancy}
+            onChange={handleDataChange}
+          />
+          <label>Email:</label>
+          <br />
+          <input
+            type="text"
+            name="email"
+            value={email}
+            onChange={handleDataChange}
+          />
+          <label>Telegram:</label>
+          <br />
+          <input
+            type="text"
+            name="linkedin"
+            value={linkedin}
+            onChange={handleDataChange}
+          />
+          <label>Telefon:</label>
+          <br />
+          <input
+            type="text"
+            name="phone"
+            value={phone}
+            onChange={handleDataChange}
+          />
         </form>
-      </div>
-      <div>
-        {imageArr[imageType === "opac" ? 2 : imageType === "white" ? 1 : 0].map(
-          (image, index) => (
-            <div
-              key={index}
-              onClick={() => handleImageSelection(image)}
-              className={selectedImage === index ? "active" : ""}
-            >
-              {image}
-            </div>
-          )
-        )}
+        {/* Options Section */}
+        <div className="f_my">
+          <div id="optionsLarge">
+            <button id="closeOptions" type="button">
+              Done
+            </button>
+            Orqa fon rangi:&nbsp;&nbsp;
+            <input
+              type="color"
+              name="bgColor"
+              id="bgColor"
+              onChange={handleOptionsChange}
+            />
+            <br />
+            <br />
+            Yozuv rangi:&nbsp;&nbsp;
+            <input
+              type="color"
+              name="fontColor"
+              id="fontColor"
+              onChange={handleOptionsChange}
+            />
+            <br />
+            <br />
+            <form id="manageImg" name="colorImg">
+              <select value={imageType} onChange={handleImageTypeChange}>
+                <option value="black">Qora</option>
+                <option value="white">Oq</option>
+                <option value="opac">Shaffof</option>
+              </select>
+            </form>
+          </div>
+          <div className="f_icons">
+            {imageArr[
+              imageType === "opac" ? 2 : imageType === "white" ? 1 : 0
+            ].map((image, index) => (
+              <div
+                key={index}
+                onClick={() => handleImageSelection(image)}
+                className={selectedImage === index ? "active" : ""}
+              >
+                {image}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
       <div className="checkCard">
         <h4>O'zgarishlarni tekshirish:</h4>
@@ -299,7 +303,6 @@ function FullGenerator() {
         <br />
       </div>
       {/* Error Message Section */}
-      <div>{errorMsg}</div>
     </div>
   );
 }

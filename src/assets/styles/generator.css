@@ -24,16 +24,47 @@
     color: #123c69;
     text-align: right;
     padding-right: 12px;
-    background-color: #eee2dc;
+    background-color: #fff;
     height: 1.6em;
 }
 
 #wrapper {
-    background-image: url("../../../img/wall_opac.png");
-    padding: 1em;
+    margin: auto;
+        width: 92%;
+        background: none;
+        max-width: 1200px;
+        background-color: #058fff30;
+        padding:  50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+        color:black;
+        margin-top: 50px;
+        border-radius: 12px;
 }
-
-
+.firstSection{
+    width: 50%;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+}
+.f_icons{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    margin-left: 20px;
+    margin-top: 0 !important;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+}
+.f_my{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
 #cardhold {
     text-align: center;
     width: 50%;
@@ -53,7 +84,7 @@ em {
 .buildNow {
     font-size: 1em;
     border-radius: 5px;
-    background-color: #eee2dc;
+    background-color: #fff;
     color: #ac3b61;
     font-weight: bold;
     padding: 10px 15px 10px 15px;
@@ -73,7 +104,7 @@ em {
 }
 
 #data {
-    background-color: #eee2dc;
+    background-color: #fff;
     padding: 0.1em 1em 0em 1em;
     border-radius: 10px;
 }
@@ -95,6 +126,7 @@ em {
     outline: none;
     border: 1px solid #333;
     border-radius: 5px;
+    color:#000
 }
 
 
@@ -113,8 +145,8 @@ em {
 }
 
 #optionsLarge {
-    display: none;
-    background-color: #f3f3f3;
+    display: block;
+    background-color: #fff;
     padding: 10px;
     position: absolute;
     left: 16px;
@@ -123,6 +155,9 @@ em {
     border-radius: 10px;
     text-align: left;
     border: 1px solid;
+    width: 100% !important;
+    margin-left: 20px;
+    margin-bottom: 10px !important;
 }
 
 .checkCard {
@@ -358,14 +393,6 @@ input[type=radio] {
     }
     #mySidenav {
         display: none;
-    }
-    #wrapper {
-        margin: auto;
-        width: 92%;
-        background: none;
-        max-width: 1200px;
-        background-color: #123c69;
-        padding: 0 50px 30px 50px;
     }
     #hiddenMenu {
         height: 1.9em;
