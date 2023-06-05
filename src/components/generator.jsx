@@ -162,6 +162,7 @@ function Generator() {
                 />
               </Draggable>
             </div>
+
             <div className="cardBottomItems">
               <div>
                 <label htmlFor="fontColor">Yozuv rangi</label>
@@ -185,6 +186,7 @@ function Generator() {
               )}
             </div>
             <>
+              <hr style={{ width: "100%", marginTop: "20px" }} />
               <div className="card_g" ref={cardRef1}>
                 <input
                   type="text"
@@ -219,7 +221,7 @@ function Generator() {
                   className="website-link"
                 />
               </div>
-              <div className="cardBottomItems">
+              <div className="cardBottomItems" style={{ marginBottom: "20px" }}>
                 <div>
                   <span style={{ color: "black" }}>Yozuv rangi</span>
                 </div>
@@ -249,7 +251,11 @@ function Generator() {
               onChange={handleUploadChange}
               hidden
             />
-            <label for="upload" class="btn upload">
+            <label
+              for="upload"
+              class="btn upload"
+              style={{ position: "absolute", left: "10px" }}
+            >
               Logo joylash
             </label>
             <div className="backgrounds">

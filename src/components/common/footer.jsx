@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 const Footer = () => {
   return (
     <>
-      <footer>
+      <footer style={{ backgroundColor: "#058fff30", paddingLeft: "70px" }}>
         <div>
           <div className="grid-4">
             <div className="logo">
@@ -63,11 +63,6 @@ const Footer = () => {
           <div className="legal connect py">
             <div className="text">
               <span>© 2023 BARCHA HUQUQLAR HIMOYALANGAN.</span>
-            </div>
-            <div className="connect">
-              <span> &nbsp; | &nbsp; </span>
-              <span>VIZITKA</span>
-              <span> &nbsp; | &nbsp; </span>
             </div>
           </div>
         </div>
