@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../assets/styles/generator.css";
 import html2canvas from "html2canvas";
 import { Icon } from "@iconify/react";
+import Navbar from "./common/navbar";
+import Footer from "./common/footer";
 
 function FullGenerator() {
   const [numCards, setNumCards] = useState("");
@@ -171,138 +173,146 @@ function FullGenerator() {
   };
 
   return (
-    <div id="wrapper">
-      {/* Data Section */}
-      <div className="firstSection">
-        <form id="data" autocomplete="off">
-          <h4>Barcha maydonlarni to'ldiring:*</h4>
-          <label>Ism:</label>
-          <br />
-          <input
-            type="text"
-            name="fullName"
-            value={fullName}
-            onChange={handleDataChange}
-          />
-          <label>Izoh:</label>
-          <br />
-          <input
-            type="text"
-            name="occupancy"
-            value={occupancy}
-            onChange={handleDataChange}
-          />
-          <label>Email:</label>
-          <br />
-          <input
-            type="text"
-            name="email"
-            value={email}
-            onChange={handleDataChange}
-          />
-          <label>Telegram:</label>
-          <br />
-          <input
-            type="text"
-            name="linkedin"
-            value={linkedin}
-            onChange={handleDataChange}
-          />
-          <label>Telefon:</label>
-          <br />
-          <input
-            type="text"
-            name="phone"
-            value={phone}
-            onChange={handleDataChange}
-          />
-        </form>
-        {/* Options Section */}
-        <div className="f_my">
-          <div id="optionsLarge">
-            <button id="closeOptions" type="button">
-              Done
-            </button>
-            Orqa fon rangi:&nbsp;&nbsp;
+    <div className="f_wra">
+      <Navbar />
+      <div id="wrapper">
+        {/* Data Section */}
+        <div className="firstSection">
+          <form id="data" autocomplete="off">
+            <h4>Barcha maydonlarni to'ldiring:*</h4>
+            <label>Ism:</label>
+            <br />
             <input
-              type="color"
-              name="bgColor"
-              id="bgColor"
-              onChange={handleOptionsChange}
+              type="text"
+              name="fullName"
+              value={fullName}
+              onChange={handleDataChange}
             />
+            <label>Izoh:</label>
             <br />
-            <br />
-            Yozuv rangi:&nbsp;&nbsp;
             <input
-              type="color"
-              name="fontColor"
-              id="fontColor"
-              onChange={handleOptionsChange}
+              type="text"
+              name="occupancy"
+              value={occupancy}
+              onChange={handleDataChange}
             />
+            <label>Email:</label>
             <br />
+            <input
+              type="text"
+              name="email"
+              value={email}
+              onChange={handleDataChange}
+            />
+            <label>Telegram:</label>
             <br />
-            <form id="manageImg" name="colorImg">
-              <select value={imageType} onChange={handleImageTypeChange}>
-                <option value="black">Qora</option>
-                <option value="white">Oq</option>
-                <option value="opac">Shaffof</option>
-              </select>
-            </form>
-          </div>
-          <div className="f_icons">
-            {imageArr[
-              imageType === "opac" ? 2 : imageType === "white" ? 1 : 0
-            ].map((image, index) => (
-              <div
-                key={index}
-                onClick={() => handleImageSelection(image)}
-                className={selectedImage === index ? "active" : ""}
-              >
-                {image}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      <div className="checkCard">
-        <h4>O'zgarishlarni tekshirish:</h4>
-        <div
-          id="card"
-          style={{ backgroundColor: backgroundColor, color: fontColor }}
-        >
-          <div id="outputName">{fullName}</div>
-          {myImage}
-          <div id="outputOccupancy" style={{ fontSize: "12px" }}>
-            {occupancy}
-          </div>
-          <br />
-          <div id="outputEmail">{email}</div>
-          <div id="outputLinkedin">{linkedin}</div>
-          <div id="outputPhone">{phone}</div>
-        </div>
-        <div id="settings">
-          <h4>
-            Settings:
-            <button id="openSettings" type="button">
-              <img
-                id="colors"
-                src="img/colorPicker.png"
-                alt="Color picker icon"
+            <input
+              type="text"
+              name="linkedin"
+              value={linkedin}
+              onChange={handleDataChange}
+            />
+            <label>Telefon:</label>
+            <br />
+            <input
+              type="text"
+              name="phone"
+              value={phone}
+              onChange={handleDataChange}
+            />
+          </form>
+          {/* Options Section */}
+          <div className="f_my">
+            <div id="optionsLarge">
+              <button id="closeOptions" type="button">
+                Done
+              </button>
+              Orqa fon rangi:&nbsp;&nbsp;
+              <input
+                type="color"
+                name="bgColor"
+                id="bgColor"
+                onChange={handleOptionsChange}
               />
-            </button>
-          </h4>
+              <br />
+              <br />
+              Yozuv rangi:&nbsp;&nbsp;
+              <input
+                type="color"
+                name="fontColor"
+                id="fontColor"
+                onChange={handleOptionsChange}
+              />
+              <br />
+              <br />
+              <form id="manageImg" name="colorImg">
+                <select value={imageType} onChange={handleImageTypeChange}>
+                  <option value="black">Qora</option>
+                  <option value="white">Oq</option>
+                  <option value="opac">Shaffof</option>
+                </select>
+              </form>
+            </div>
+            <div className="f_icons">
+              {imageArr[
+                imageType === "opac" ? 2 : imageType === "white" ? 1 : 0
+              ].map((image, index) => (
+                <div
+                  key={index}
+                  onClick={() => handleImageSelection(image)}
+                  className={selectedImage === index ? "active" : ""}
+                >
+                  {image}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        <div id="errorMsg"></div>
-        <button type="button" className="button" onClick={handleImageDownload}>
-          Yuklab olish
-        </button>
-        <button id="startAgain" type="button">
-          Build a new card
-        </button>
-        <br />
-        <br />
+        <div className="checkCard">
+          <h4>O'zgarishlarni tekshirish:</h4>
+          <div
+            id="card"
+            style={{ backgroundColor: backgroundColor, color: fontColor }}
+          >
+            <div id="outputName">{fullName}</div>
+            {myImage}
+            <div id="outputOccupancy" style={{ fontSize: "12px" }}>
+              {occupancy}
+            </div>
+            <br />
+            <div id="outputEmail">{email}</div>
+            <div id="outputLinkedin">{linkedin}</div>
+            <div id="outputPhone">{phone}</div>
+          </div>
+          <div id="settings">
+            <h4>
+              Settings:
+              <button id="openSettings" type="button">
+                <img
+                  id="colors"
+                  src="img/colorPicker.png"
+                  alt="Color picker icon"
+                />
+              </button>
+            </h4>
+          </div>
+          <div id="errorMsg"></div>
+          <button
+            type="button"
+            className="button"
+            onClick={handleImageDownload}
+          >
+            Yuklab olish
+          </button>
+          <button id="startAgain" type="button">
+            Build a new card
+          </button>
+          <br />
+          <br />
+        </div>
+        {/* Error Message Section */}
       </div>
-      {/* Error Message Section */}
+      <Footer />
     </div>
   );
 }
