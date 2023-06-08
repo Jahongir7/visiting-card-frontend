@@ -26,3 +26,12 @@
     border-radius: 5px;
     font-weight: 900;
 }
+@media (max-width: 768px) {
+    body::before{
+        content: 'Dastur faqat komputerda ishlaydi';
+    }
+    .App{
+        display: none;
+    }
+}
+    
