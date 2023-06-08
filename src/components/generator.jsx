@@ -170,6 +170,7 @@ function Generator() {
                   id="fontColor"
                   type="color"
                   onChange={(e) => setFontColor(e.target.value)}
+                  value="#ffffff"
                 />
               </div>
               {localStorage.getItem("auth") !== null ? (
